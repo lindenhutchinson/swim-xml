@@ -1,0 +1,420 @@
+<?xml version="1.0" ?>
+<data>
+	<indicator name="ecoli" type="2" class="T"/>
+	<indicator name="e coli" type="2" class="N"/>
+	<indicator name="e.coli" type="2" class="T"/>
+	<indicator name="coliforms" type="2" class="N"/>
+	<indicator name="potato" type="2" class="N"/>
+	<indicator name="pecolint" type="2" class="N"/>
+	<indicator name="Eschericia coli" type="2" class="T"/>
+	<indicatorcategory name="cat1" class="3">
+		<map indicator="ecoli"/>
+		<map indicator="e coli"/>
+		<map indicator="coliforms"/>
+	</indicatorcategory>
+	<indicatorcategory name="cat2" class="3">
+		<map indicator="potato"/>
+		<map indicator="e.coli"/>
+	</indicatorcategory>
+	<indicatorcategory name="cat3" class="3">
+		<map indicator="pecolint"/>
+	</indicatorcategory>
+	<indicatorcategory name="cat4" class="3">
+		<map indicator="Eschericia coli"/>
+	</indicatorcategory>
+	<site name="scheme1" type="6"/>
+	<site name="scheme2" type="6"/>
+	<site name="scheme3" type="6" start_date="1990-12-12" end_date="2021-12-12"/>
+	<site name="site1" type="5" parent="scheme1">
+		<map category="cat1"/>
+		<map category="cat2"/>
+	</site>
+	<site name="site2" type="5" parent="scheme2">
+		<map category="cat2"/>
+	</site>
+	<site name="site1_child1" type="5" parent="site1">
+		<map category="cat3"/>
+	</site>
+	<site name="site4" type="5" parent="scheme3">
+		<map category="cat4"/>
+	</site>
+	<accessgroup name="group1">
+		<user name="admin"/>
+		<site name="scheme1"/>
+		<site name="scheme2"/>
+		<site name="scheme3"/>
+		<site name="site1">
+			<category name="cat1"/>
+			<category name="cat2"/>
+		</site>
+		<site name="site2">
+			<category name="cat2"/>
+		</site>
+		<site name="site1_child1">
+			<category name="cat3"/>
+		</site>
+		<site name="site4">
+			<category name="cat4"/>
+		</site>
+	</accessgroup>
+	<operationsdata site="site1" indicator="ecoli">
+		<data date="2022-01-01 00:00:00" value="valid"/>
+		<data date="2022-02-02 02:00:00" value="valid"/>
+		<data date="2022-03-03 04:00:00" value="invalid"/>
+		<data date="2022-04-04 06:00:00" value="valid"/>
+		<data date="2022-05-05 08:00:00" value="invalid"/>
+		<data date="2022-06-06 10:00:00" value="invalid"/>
+		<data date="2022-07-07 12:00:00" value="invalid"/>
+		<data date="2022-08-08 14:00:00" value="invalid"/>
+		<data date="2022-09-09 16:00:00" value="valid"/>
+		<data date="2022-10-10 18:00:00" value="valid"/>
+		<data date="2022-11-11 20:00:00" value="invalid"/>
+		<data date="2022-12-12 22:00:00" value="valid"/>
+		<data date="2023-01-14 00:00:00" value="invalid"/>
+		<data date="2023-02-15 02:00:00" value="invalid"/>
+		<data date="2023-03-16 04:00:00" value="valid"/>
+		<data date="2023-04-17 06:00:00" value="invalid"/>
+		<data date="2023-05-18 08:00:00" value="invalid"/>
+		<data date="2023-06-19 10:00:00" value="valid"/>
+		<data date="2023-07-20 12:00:00" value="valid"/>
+		<data date="2023-08-21 14:00:00" value="invalid"/>
+		<data date="2023-09-22 16:00:00" value="valid"/>
+		<data date="2023-10-23 18:00:00" value="valid"/>
+		<data date="2023-11-24 20:00:00" value="valid"/>
+		<data date="2023-12-25 22:00:00" value="valid"/>
+		<data date="2024-01-27 00:00:00" value="invalid"/>
+		<data date="2024-02-28 02:00:00" value="valid"/>
+		<data date="2024-03-29 04:00:00" value="invalid"/>
+		<data date="2024-04-30 06:00:00" value="valid"/>
+		<data date="2024-05-31 08:00:00" value="valid"/>
+		<data date="2024-07-01 10:00:00" value="invalid"/>
+		<data date="2024-08-02 12:00:00" value="invalid"/>
+		<data date="2024-09-03 14:00:00" value="valid"/>
+		<data date="2024-10-04 16:00:00" value="invalid"/>
+		<data date="2024-11-05 18:00:00" value="valid"/>
+		<data date="2024-12-06 20:00:00" value="valid"/>
+		<data date="2025-01-07 22:00:00" value="invalid"/>
+		<data date="2025-02-09 00:00:00" value="invalid"/>
+		<data date="2025-03-10 02:00:00" value="valid"/>
+		<data date="2025-04-11 04:00:00" value="invalid"/>
+		<data date="2025-05-12 06:00:00" value="valid"/>
+		<data date="2025-06-13 08:00:00" value="valid"/>
+		<data date="2025-07-14 10:00:00" value="invalid"/>
+		<data date="2025-08-15 12:00:00" value="valid"/>
+		<data date="2025-09-16 14:00:00" value="invalid"/>
+		<data date="2025-10-17 16:00:00" value="invalid"/>
+		<data date="2025-11-18 18:00:00" value="valid"/>
+		<data date="2025-12-19 20:00:00" value="invalid"/>
+		<data date="2026-01-20 22:00:00" value="invalid"/>
+		<data date="2026-02-22 00:00:00" value="invalid"/>
+		<data date="2026-03-23 02:00:00" value="invalid"/>
+		<data date="2026-04-24 04:00:00" value="valid"/>
+		<data date="2026-05-25 06:00:00" value="invalid"/>
+		<data date="2026-06-26 08:00:00" value="valid"/>
+		<data date="2026-07-27 10:00:00" value="invalid"/>
+		<data date="2026-08-28 12:00:00" value="invalid"/>
+		<data date="2026-09-29 14:00:00" value="valid"/>
+		<data date="2026-10-30 16:00:00" value="invalid"/>
+		<data date="2026-12-01 18:00:00" value="invalid"/>
+		<data date="2027-01-02 20:00:00" value="valid"/>
+		<data date="2027-02-03 22:00:00" value="invalid"/>
+		<data date="2027-03-05 00:00:00" value="valid"/>
+		<data date="2027-04-06 02:00:00" value="valid"/>
+		<data date="2027-05-07 04:00:00" value="invalid"/>
+		<data date="2027-06-08 06:00:00" value="invalid"/>
+		<data date="2027-07-09 08:00:00" value="invalid"/>
+		<data date="2027-08-10 10:00:00" value="valid"/>
+		<data date="2027-09-11 12:00:00" value="invalid"/>
+		<data date="2027-10-12 14:00:00" value="valid"/>
+		<data date="2027-11-13 16:00:00" value="invalid"/>
+		<data date="2027-12-14 18:00:00" value="invalid"/>
+		<data date="2028-01-15 20:00:00" value="valid"/>
+		<data date="2028-02-16 22:00:00" value="valid"/>
+		<data date="2028-03-18 00:00:00" value="valid"/>
+		<data date="2028-04-19 02:00:00" value="valid"/>
+		<data date="2028-05-20 04:00:00" value="valid"/>
+		<data date="2028-06-21 06:00:00" value="valid"/>
+		<data date="2028-07-22 08:00:00" value="invalid"/>
+		<data date="2028-08-23 10:00:00" value="invalid"/>
+		<data date="2028-09-24 12:00:00" value="invalid"/>
+		<data date="2028-10-25 14:00:00" value="invalid"/>
+		<data date="2028-11-26 16:00:00" value="invalid"/>
+		<data date="2028-12-27 18:00:00" value="valid"/>
+		<data date="2029-01-28 20:00:00" value="invalid"/>
+		<data date="2029-03-01 22:00:00" value="valid"/>
+		<data date="2029-04-03 00:00:00" value="valid"/>
+		<data date="2029-05-04 02:00:00" value="invalid"/>
+		<data date="2029-06-05 04:00:00" value="valid"/>
+		<data date="2029-07-06 06:00:00" value="invalid"/>
+		<data date="2029-08-07 08:00:00" value="invalid"/>
+		<data date="2029-09-08 10:00:00" value="valid"/>
+		<data date="2029-10-09 12:00:00" value="invalid"/>
+		<data date="2029-11-10 14:00:00" value="invalid"/>
+		<data date="2029-12-11 16:00:00" value="invalid"/>
+		<data date="2030-01-12 18:00:00" value="invalid"/>
+		<data date="2030-02-13 20:00:00" value="invalid"/>
+		<data date="2030-03-14 22:00:00" value="valid"/>
+		<data date="2030-04-16 00:00:00" value="invalid"/>
+		<data date="2030-05-17 02:00:00" value="invalid"/>
+		<data date="2030-06-18 04:00:00" value="valid"/>
+		<data date="2030-07-19 06:00:00" value="valid"/>
+	</operationsdata>
+	<operationsdata site="site1" indicator="e coli">
+		<data date="2022-01-01 00:00:00" value="0"/>
+		<data date="2022-01-08 02:00:00" value="0"/>
+		<data date="2022-01-15 04:00:00" value="&amp;lt;1"/>
+		<data date="2022-01-22 06:00:00" value="0.1"/>
+		<data date="2022-01-29 08:00:00" value="&amp;lt;1"/>
+		<data date="2022-02-05 10:00:00" value="&amp;lt;1"/>
+		<data date="2022-02-12 12:00:00" value="&amp;lt;1"/>
+		<data date="2022-02-19 14:00:00" value="&amp;lt;1"/>
+		<data date="2022-02-26 16:00:00" value="&amp;lt;10"/>
+		<data date="2022-03-05 18:00:00" value="&amp;lt;1"/>
+		<data date="2022-03-12 20:00:00" value="0.1"/>
+		<data date="2022-03-19 22:00:00" value="0"/>
+		<data date="2022-03-27 00:00:00" value="0.1"/>
+		<data date="2022-04-03 02:00:00" value="&amp;lt;1"/>
+		<data date="2022-04-10 04:00:00" value="0"/>
+		<data date="2022-04-17 06:00:00" value="0.1"/>
+		<data date="2022-04-24 08:00:00" value="0.1"/>
+		<data date="2022-05-01 10:00:00" value="&amp;lt;1"/>
+		<data date="2022-05-08 12:00:00" value="0"/>
+		<data date="2022-05-15 14:00:00" value="0"/>
+		<data date="2022-05-22 16:00:00" value="0.1"/>
+		<data date="2022-05-29 18:00:00" value="0"/>
+		<data date="2022-06-05 20:00:00" value="0.1"/>
+		<data date="2022-06-12 22:00:00" value="0.1"/>
+		<data date="2022-06-20 00:00:00" value="&amp;lt;10"/>
+		<data date="2022-06-27 02:00:00" value="0.1"/>
+		<data date="2022-07-04 04:00:00" value="&amp;lt;10"/>
+		<data date="2022-07-11 06:00:00" value="&amp;lt;10"/>
+		<data date="2022-07-18 08:00:00" value="&amp;lt;1"/>
+		<data date="2022-07-25 10:00:00" value="&amp;lt;1"/>
+		<data date="2022-08-01 12:00:00" value="0.1"/>
+		<data date="2022-08-08 14:00:00" value="&amp;lt;10"/>
+		<data date="2022-08-15 16:00:00" value="0.1"/>
+		<data date="2022-08-22 18:00:00" value="&amp;lt;10"/>
+		<data date="2022-08-29 20:00:00" value="0"/>
+		<data date="2022-09-05 22:00:00" value="0.1"/>
+		<data date="2022-09-13 00:00:00" value="&amp;lt;1"/>
+		<data date="2022-09-20 02:00:00" value="0.1"/>
+		<data date="2022-09-27 04:00:00" value="0"/>
+		<data date="2022-10-04 06:00:00" value="&amp;lt;10"/>
+		<data date="2022-10-11 08:00:00" value="&amp;lt;1"/>
+		<data date="2022-10-18 10:00:00" value="0"/>
+		<data date="2022-10-25 12:00:00" value="&amp;lt;1"/>
+		<data date="2022-11-01 14:00:00" value="&amp;lt;10"/>
+		<data date="2022-11-08 16:00:00" value="0"/>
+		<data date="2022-11-15 18:00:00" value="&amp;lt;1"/>
+		<data date="2022-11-22 20:00:00" value="0"/>
+		<data date="2022-11-29 22:00:00" value="&amp;lt;10"/>
+		<data date="2022-12-07 00:00:00" value="&amp;lt;10"/>
+		<data date="2022-12-14 02:00:00" value="0"/>
+		<data date="2022-12-21 04:00:00" value="&amp;lt;10"/>
+		<data date="2022-12-28 06:00:00" value="0"/>
+		<data date="2023-01-04 08:00:00" value="&amp;lt;1"/>
+		<data date="2023-01-11 10:00:00" value="&amp;lt;10"/>
+		<data date="2023-01-18 12:00:00" value="0.1"/>
+		<data date="2023-01-25 14:00:00" value="&amp;lt;10"/>
+		<data date="2023-02-01 16:00:00" value="&amp;lt;1"/>
+		<data date="2023-02-08 18:00:00" value="0.1"/>
+		<data date="2023-02-15 20:00:00" value="0"/>
+		<data date="2023-02-22 22:00:00" value="0"/>
+		<data date="2023-03-02 00:00:00" value="&amp;lt;1"/>
+		<data date="2023-03-09 02:00:00" value="0.1"/>
+		<data date="2023-03-16 04:00:00" value="&amp;lt;1"/>
+		<data date="2023-03-23 06:00:00" value="&amp;lt;1"/>
+		<data date="2023-03-30 08:00:00" value="0.1"/>
+		<data date="2023-04-06 10:00:00" value="0.1"/>
+		<data date="2023-04-13 12:00:00" value="0"/>
+		<data date="2023-04-20 14:00:00" value="&amp;lt;10"/>
+		<data date="2023-04-27 16:00:00" value="0.1"/>
+		<data date="2023-05-04 18:00:00" value="0"/>
+		<data date="2023-05-11 20:00:00" value="&amp;lt;1"/>
+		<data date="2023-05-18 22:00:00" value="&amp;lt;1"/>
+		<data date="2023-05-26 00:00:00" value="0"/>
+		<data date="2023-06-02 02:00:00" value="&amp;lt;10"/>
+		<data date="2023-06-09 04:00:00" value="0"/>
+		<data date="2023-06-16 06:00:00" value="&amp;lt;1"/>
+		<data date="2023-06-23 08:00:00" value="&amp;lt;10"/>
+		<data date="2023-06-30 10:00:00" value="0"/>
+		<data date="2023-07-07 12:00:00" value="0.1"/>
+		<data date="2023-07-14 14:00:00" value="&amp;lt;1"/>
+		<data date="2023-07-21 16:00:00" value="0"/>
+		<data date="2023-07-28 18:00:00" value="&amp;lt;10"/>
+		<data date="2023-08-04 20:00:00" value="0"/>
+		<data date="2023-08-11 22:00:00" value="&amp;lt;10"/>
+		<data date="2023-08-19 00:00:00" value="&amp;lt;1"/>
+		<data date="2023-08-26 02:00:00" value="&amp;lt;10"/>
+		<data date="2023-09-02 04:00:00" value="0.1"/>
+		<data date="2023-09-09 06:00:00" value="&amp;lt;10"/>
+		<data date="2023-09-16 08:00:00" value="&amp;lt;1"/>
+		<data date="2023-09-23 10:00:00" value="0.1"/>
+		<data date="2023-09-30 12:00:00" value="&amp;lt;10"/>
+		<data date="2023-10-07 14:00:00" value="0.1"/>
+		<data date="2023-10-14 16:00:00" value="&amp;lt;1"/>
+		<data date="2023-10-21 18:00:00" value="0"/>
+		<data date="2023-10-28 20:00:00" value="0"/>
+		<data date="2023-11-04 22:00:00" value="0.1"/>
+		<data date="2023-11-12 00:00:00" value="0"/>
+		<data date="2023-11-19 02:00:00" value="0.1"/>
+		<data date="2023-11-26 04:00:00" value="&amp;lt;10"/>
+		<data date="2023-12-03 06:00:00" value="0"/>
+	</operationsdata>
+	<operationsdata site="site2" indicator="e.coli">
+		<data date="2021-01-01 00:00:00" value="pass"/>
+		<data date="2021-01-10 02:00:00" value="present"/>
+		<data date="2021-01-19 04:00:00" value="valid"/>
+		<data date="2021-01-28 06:00:00" value="fail"/>
+		<data date="2021-02-06 08:00:00" value="absent"/>
+		<data date="2021-02-15 10:00:00" value="pass"/>
+		<data date="2021-02-24 12:00:00" value="present"/>
+		<data date="2021-03-05 14:00:00" value="absent"/>
+		<data date="2021-03-14 16:00:00" value="fail"/>
+		<data date="2021-03-23 18:00:00" value="absent"/>
+		<data date="2021-04-01 20:00:00" value="invalid"/>
+		<data date="2021-04-10 22:00:00" value="valid"/>
+		<data date="2021-04-20 00:00:00" value="present"/>
+		<data date="2021-04-29 02:00:00" value="valid"/>
+		<data date="2021-05-08 04:00:00" value="valid"/>
+		<data date="2021-05-17 06:00:00" value="invalid"/>
+		<data date="2021-05-26 08:00:00" value="invalid"/>
+		<data date="2021-06-04 10:00:00" value="invalid"/>
+		<data date="2021-06-13 12:00:00" value="absent"/>
+		<data date="2021-06-22 14:00:00" value="invalid"/>
+		<data date="2021-07-01 16:00:00" value="pass"/>
+		<data date="2021-07-10 18:00:00" value="pass"/>
+		<data date="2021-07-19 20:00:00" value="absent"/>
+		<data date="2021-07-28 22:00:00" value="absent"/>
+		<data date="2021-08-07 00:00:00" value="pass"/>
+		<data date="2021-08-16 02:00:00" value="pass"/>
+		<data date="2021-08-25 04:00:00" value="pass"/>
+		<data date="2021-09-03 06:00:00" value="pass"/>
+		<data date="2021-09-12 08:00:00" value="valid"/>
+		<data date="2021-09-21 10:00:00" value="pass"/>
+		<data date="2021-09-30 12:00:00" value="invalid"/>
+		<data date="2021-10-09 14:00:00" value="absent"/>
+		<data date="2021-10-18 16:00:00" value="present"/>
+		<data date="2021-10-27 18:00:00" value="fail"/>
+		<data date="2021-11-05 20:00:00" value="invalid"/>
+		<data date="2021-11-14 22:00:00" value="absent"/>
+		<data date="2021-11-24 00:00:00" value="absent"/>
+		<data date="2021-12-03 02:00:00" value="valid"/>
+		<data date="2021-12-12 04:00:00" value="pass"/>
+		<data date="2021-12-21 06:00:00" value="valid"/>
+		<data date="2021-12-30 08:00:00" value="fail"/>
+		<data date="2022-01-08 10:00:00" value="valid"/>
+		<data date="2022-01-17 12:00:00" value="fail"/>
+		<data date="2022-01-26 14:00:00" value="invalid"/>
+		<data date="2022-02-04 16:00:00" value="invalid"/>
+		<data date="2022-02-13 18:00:00" value="pass"/>
+		<data date="2022-02-22 20:00:00" value="valid"/>
+		<data date="2022-03-03 22:00:00" value="absent"/>
+		<data date="2022-03-13 00:00:00" value="absent"/>
+		<data date="2022-03-22 02:00:00" value="fail"/>
+	</operationsdata>
+	<operationsdata site="site1_child1" indicator="pecolint">
+		<data date="2022-01-01 00:00:00" value="1"/>
+		<data date="2022-01-11 02:00:00" value="&amp;lt;1"/>
+		<data date="2022-01-21 04:00:00" value="&amp;lt;1"/>
+		<data date="2022-01-31 06:00:00" value="1"/>
+		<data date="2022-02-10 08:00:00" value="&amp;lt;1"/>
+		<data date="2022-02-20 10:00:00" value="1"/>
+		<data date="2022-03-02 12:00:00" value="2"/>
+		<data date="2022-03-12 14:00:00" value="2"/>
+		<data date="2022-03-22 16:00:00" value="2"/>
+		<data date="2022-04-01 18:00:00" value="&amp;lt;1"/>
+		<data date="2022-04-11 20:00:00" value="&amp;lt;1"/>
+		<data date="2022-04-21 22:00:00" value="1"/>
+		<data date="2022-05-02 00:00:00" value="2"/>
+		<data date="2022-05-12 02:00:00" value="2"/>
+		<data date="2022-05-22 04:00:00" value="1"/>
+		<data date="2022-06-01 06:00:00" value="1"/>
+		<data date="2022-06-11 08:00:00" value="2"/>
+		<data date="2022-06-21 10:00:00" value="1"/>
+		<data date="2022-07-01 12:00:00" value="&amp;lt;1"/>
+		<data date="2022-07-11 14:00:00" value="&amp;lt;1"/>
+		<data date="2022-07-21 16:00:00" value="1"/>
+		<data date="2022-07-31 18:00:00" value="1"/>
+		<data date="2022-08-10 20:00:00" value="2"/>
+		<data date="2022-08-20 22:00:00" value="1"/>
+		<data date="2022-08-31 00:00:00" value="1"/>
+		<data date="2022-09-10 02:00:00" value="1"/>
+		<data date="2022-09-20 04:00:00" value="1"/>
+		<data date="2022-09-30 06:00:00" value="&amp;lt;1"/>
+		<data date="2022-10-10 08:00:00" value="2"/>
+		<data date="2022-10-20 10:00:00" value="1"/>
+		<data date="2022-10-30 12:00:00" value="1"/>
+		<data date="2022-11-09 14:00:00" value="2"/>
+		<data date="2022-11-19 16:00:00" value="1"/>
+		<data date="2022-11-29 18:00:00" value="&amp;lt;1"/>
+		<data date="2022-12-09 20:00:00" value="1"/>
+		<data date="2022-12-19 22:00:00" value="1"/>
+		<data date="2022-12-30 00:00:00" value="&amp;lt;1"/>
+		<data date="2023-01-09 02:00:00" value="1"/>
+		<data date="2023-01-19 04:00:00" value="2"/>
+		<data date="2023-01-29 06:00:00" value="2"/>
+		<data date="2023-02-08 08:00:00" value="&amp;lt;1"/>
+		<data date="2023-02-18 10:00:00" value="2"/>
+		<data date="2023-02-28 12:00:00" value="&amp;lt;1"/>
+		<data date="2023-03-10 14:00:00" value="2"/>
+		<data date="2023-03-20 16:00:00" value="&amp;lt;1"/>
+		<data date="2023-03-30 18:00:00" value="2"/>
+		<data date="2023-04-09 20:00:00" value="2"/>
+		<data date="2023-04-19 22:00:00" value="1"/>
+		<data date="2023-04-30 00:00:00" value="1"/>
+		<data date="2023-05-10 02:00:00" value="&amp;lt;1"/>
+	</operationsdata>
+	<operationsdata site="site4" indicator="ecoli">
+		<data date="2021-01-01 00:00:00" value="pass"/>
+		<data date="2021-01-10 02:00:00" value="valid"/>
+		<data date="2021-01-19 04:00:00" value="valid"/>
+		<data date="2021-01-28 06:00:00" value="valid"/>
+		<data date="2021-02-06 08:00:00" value="pass"/>
+		<data date="2021-02-15 10:00:00" value="present"/>
+		<data date="2021-02-24 12:00:00" value="absent"/>
+		<data date="2021-03-05 14:00:00" value="pass"/>
+		<data date="2021-03-14 16:00:00" value="fail"/>
+		<data date="2021-03-23 18:00:00" value="fail"/>
+		<data date="2021-04-01 20:00:00" value="pass"/>
+		<data date="2021-04-10 22:00:00" value="fail"/>
+		<data date="2021-04-20 00:00:00" value="valid"/>
+		<data date="2021-04-29 02:00:00" value="valid"/>
+		<data date="2021-05-08 04:00:00" value="pass"/>
+		<data date="2021-05-17 06:00:00" value="absent"/>
+		<data date="2021-05-26 08:00:00" value="fail"/>
+		<data date="2021-06-04 10:00:00" value="valid"/>
+		<data date="2021-06-13 12:00:00" value="pass"/>
+		<data date="2021-06-22 14:00:00" value="invalid"/>
+		<data date="2021-07-01 16:00:00" value="absent"/>
+		<data date="2021-07-10 18:00:00" value="absent"/>
+		<data date="2021-07-19 20:00:00" value="present"/>
+		<data date="2021-07-28 22:00:00" value="fail"/>
+		<data date="2021-08-07 00:00:00" value="present"/>
+		<data date="2021-08-16 02:00:00" value="pass"/>
+		<data date="2021-08-25 04:00:00" value="pass"/>
+		<data date="2021-09-03 06:00:00" value="invalid"/>
+		<data date="2021-09-12 08:00:00" value="absent"/>
+		<data date="2021-09-21 10:00:00" value="invalid"/>
+		<data date="2021-09-30 12:00:00" value="pass"/>
+		<data date="2021-10-09 14:00:00" value="invalid"/>
+		<data date="2021-10-18 16:00:00" value="invalid"/>
+		<data date="2021-10-27 18:00:00" value="pass"/>
+		<data date="2021-11-05 20:00:00" value="valid"/>
+		<data date="2021-11-14 22:00:00" value="pass"/>
+		<data date="2021-11-24 00:00:00" value="valid"/>
+		<data date="2021-12-03 02:00:00" value="fail"/>
+		<data date="2021-12-12 04:00:00" value="valid"/>
+		<data date="2021-12-21 06:00:00" value="present"/>
+		<data date="2021-12-30 08:00:00" value="absent"/>
+		<data date="2022-01-08 10:00:00" value="present"/>
+		<data date="2022-01-17 12:00:00" value="pass"/>
+		<data date="2022-01-26 14:00:00" value="invalid"/>
+		<data date="2022-02-04 16:00:00" value="fail"/>
+		<data date="2022-02-13 18:00:00" value="pass"/>
+		<data date="2022-02-22 20:00:00" value="valid"/>
+		<data date="2022-03-03 22:00:00" value="pass"/>
+		<data date="2022-03-13 00:00:00" value="invalid"/>
+		<data date="2022-03-22 02:00:00" value="pass"/>
+	</operationsdata>
+</data>

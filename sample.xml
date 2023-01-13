@@ -1,0 +1,304 @@
+<?xml version='1.0' standalone='yes'?>
+<!-- vim:ft=xml
+-->
+<data>
+	<!-- E coli -->
+	<indicator name="E coli" type="T" class="2" /> 
+	<!-- Eschericia coli -->
+	<indicator name="Eschericia coli" type="T" class="2" />
+	<!-- num_1 -->
+	<indicator name="coliforms" type="N" class="2" />
+	<!-- ecoli -->
+	<indicator name="ecoli" type="N" class="2" />
+	<!-- num_3 -->
+	<indicator name="E.coli" type="N" class="2" />
+
+	<indicator name="not ekoli" type="N" class="2" />
+	<indicator name="coliwobble" type="N" class="2" />
+
+	<indicatorcategory name="cat1" class="2">
+		<map indicator="E coli" />
+		<map indicator="coliforms" />
+		<map indicator="E.coli" />
+	</indicatorcategory>
+
+	<indicatorcategory name="cat2" class="2">
+		<map indicator="Eschericia coli" />
+		<map indicator="ecoli" />
+	</indicatorcategory>
+
+	<indicatorcategory name="cat3" class="2">
+		<map indicator="ecoli" />
+		<map indicator="not ekoli" />
+		<map indicator="coliwobble" />
+	</indicatorcategory>
+
+	<site name="scheme1" type="6" />
+	<site name="scheme2" type="6" />
+	<site name="scheme3_inactive" type="6" start_date="1990-12-12" end_date="2021-12-12" />
+
+	<site name="site1" type="5" parent="scheme1">
+		<map category="cat1" />
+	</site>
+
+	<site name="site2" type="5" parent="scheme1">
+		<map category="cat2" />
+	</site>
+
+	<site name="site3" type="5" parent="scheme2">
+		<map category="cat3" />
+	</site>
+
+
+	<site name="site1_child" type="5" parent="site1">
+		<map category="cat3" />
+	</site>
+
+	<site name="site1_child_child" type="5" parent="site1_child">
+		<map category="cat1" />
+	</site>
+
+	<site name="site4" type="5" parent="scheme3_inactive" start_date="1990-12-12" end_date="2021-12-12">
+		<map category="cat2" />
+	</site>
+
+	<accessgroup name="group1">
+		<!-- put the test user into this access group -->
+		<user name="admin" />
+		<site name="scheme1" />
+		<site name="scheme2" />
+		<site name="scheme3_inactive" />
+		<site name="site1">
+			<category name="cat1" />
+		</site>
+		<site name="site2">
+			<category name="cat2" />
+		</site>
+		<site name="site4">
+			<category name="cat2" />
+		</site>
+		<site name="site1_child">
+			<category name="cat3" />
+		</site>
+
+		<site name="site1_child_child">
+			<category name="cat1" />
+		</site>
+
+		<site name="site3">
+			<category name="cat3" />
+		</site>
+	</accessgroup>
+
+	<operationsdata site="site1" indicator="E coli">
+		<data date="2013-02-1 12:00:00" value="Absent" />
+		<data date="2013-02-2 12:00:00" value="pass" />
+		<data date="2013-02-3 12:00:00" value="present" />
+		<data date="2013-02-4 12:00:00" value="absent" />
+		<data date="2013-02-5 12:00:00" value="Absent" />
+	</operationsdata>
+
+	<operationsdata site="site1" indicator="E coli">
+		<data date="2014-01-17 12:00:00" value="Absent" />
+		<data date="2014-02-17 12:00:00" value="pass" />
+		<data date="2014-03-17 12:00:00" value="present" />
+		<data date="2014-04-17 12:00:00" value="absent" />
+		<data date="2014-05-17 12:00:00" value="Absent" />
+		<!-- <data date="2014-06-17 12:00:00" value="Absent" /> -->
+		<data date="2014-07-17 12:00:00" value="Absent" />
+		<data date="2014-08-17 12:00:00" value="Absent" />
+		<data date="2014-09-17 12:00:00" value="Absent" />
+		<data date="2014-10-17 12:00:00" value="fail" />
+		<data date="2014-11-17 12:00:00" value="Absent" />
+		<data date="2014-12-17 12:00:00" value="Absent" />
+
+		<data date="2015-01-17 12:00:00" value="pass" />
+		<data date="2015-02-17 12:00:00" value="PASS" />
+		<data date="2015-03-17 12:00:00" value="paSS" />
+		<data date="2015-04-17 12:00:00" value="abSENT" />
+		<data date="2015-05-17 12:00:00" value="Absent" />
+		<data date="2015-06-17 12:00:00" value="Absent" />
+		<data date="2015-07-17 12:00:00" value="pass" />
+		<data date="2015-08-17 12:00:00" value="present" />
+		<data date="2015-09-17 12:00:00" value="pass" />
+		<data date="2015-10-17 12:00:00" value="Absent" />
+		<data date="2015-11-17 12:00:00" value="absent" />
+
+		<data date="2015-12-01 12:00:00" value="Absent" />
+		<data date="2015-12-02 12:00:00" value="Absent" />
+		<data date="2015-12-03 12:00:00" value="Absent" />
+		<data date="2015-12-04 12:00:00" value="Absent" />
+		<data date="2015-12-05 12:00:00" value="Absent" />
+		<data date="2015-12-06 12:00:00" value="Absent" />
+		<data date="2015-12-07 12:00:00" value="Absent" />
+		<data date="2015-12-08 12:00:00" value="Absent" />
+		<data date="2015-12-09 12:00:00" value="Absent" />
+		<data date="2015-12-10 12:00:00" value="Absent" />
+		<data date="2015-12-11 12:00:00" value="Absent" />
+		<data date="2015-12-12 12:00:00" value="Absent" />
+		<data date="2015-12-13 12:00:00" value="Absent" />
+		<data date="2015-12-14 12:00:00" value="Absent" />
+		<data date="2015-12-15 12:00:00" value="Absent" />
+		<data date="2015-12-16 12:00:00" value="Absent" />
+		<data date="2015-12-17 12:00:00" value="Absent" />
+		<data date="2015-12-18 12:00:00" value="Absent" />
+		<data date="2015-12-19 12:00:00" value="Absent" />
+		<data date="2015-12-20 12:00:00" value="Absent" />
+		<data date="2015-12-21 12:00:00" value="Absent" />
+		<data date="2015-12-22 12:00:00" value="Absent" />
+		<data date="2015-12-23 12:00:00" value="Absent" />
+		<data date="2015-12-24 12:00:00" value="Absent" />
+		<data date="2015-12-25 12:00:00" value="Absent" />
+		<data date="2015-12-26 12:00:00" value="Absent" />
+		<data date="2015-12-27 12:00:00" value="Absent" />
+		<data date="2015-12-28 12:00:00" value="Absent" />
+		<data date="2015-12-29 12:00:00" value="Absent" />
+		<data date="2015-12-30 12:00:00" value="Absent" />
+		<data date="2015-12-30 12:00:01" value="Absent" />
+		<data date="2015-12-30 12:00:02" value="Absent" />
+		<data date="2015-12-30 12:00:03" value="Absent" />
+		<data date="2015-12-30 12:00:04" value="Absent" />
+		<data date="2015-12-30 12:00:05" value="Absent" />
+		<data date="2015-12-30 12:00:06" value="Absent" />
+		<data date="2015-12-30 12:00:07" value="Absent" />
+		<data date="2015-12-30 12:00:08" value="Absent" />
+
+		<data date="2022-10-29 12:00:00" value="fail" />
+		<data date="2022-10-30 12:00:00" value="fail" />
+	</operationsdata>
+
+	<!-- previous FY data -->
+	<operationsdata site="site1_child_child" indicator="E coli">
+		<data dynamic_date='07/01 - 2 years' value="Absent" />
+		<data dynamic_date='08/01 - 2 years' value="Absent" />
+		<data dynamic_date='09/01 - 2 years' value="Absent" />
+		<data dynamic_date='10/01 - 2 years' value="Absent" />
+		<data dynamic_date='11/01 - 2 years' value="Absent" />
+		<data dynamic_date='12/01 - 2 years' value="Absent" />
+		<data dynamic_date='01/01 - 1 years' value="Absent" />
+		<data dynamic_date='02/01 - 1 years' value="Absent" />
+		<data dynamic_date='03/01 - 1 years' value="Absent" />
+		<data dynamic_date='04/01 - 1 years' value="Absent" />
+		<data dynamic_date='05/01 - 1 years' value="Absent" />
+		<!-- miss 1 month to ensure that is handled ok -->
+		<data dynamic_date='07/01 - 1 years' value="Absent" />
+		<data dynamic_date='08/01 - 1 years' value="Absent" />
+		<data dynamic_date='09/01 - 1 years' value="Absent" />
+		<data dynamic_date='10/01 - 1 years' value="Absent" />
+		<data dynamic_date='11/01 - 1 years' value="Absent" />
+		<data dynamic_date='12/01 - 1 years' value="Absent" />
+		<data dynamic_date='01/01' value="fail" />
+		<data dynamic_date='02/01' value="fail" />
+		<data dynamic_date='03/01' value="fail" />
+		<data dynamic_date='04/01' value="fail" />
+		<data dynamic_date='05/01' value="fail" />
+		<data dynamic_date='06/01' value="fail" />
+	</operationsdata>
+
+	<!-- previous year data -->
+	<operationsdata site="site3" indicator="ecoli">
+		<!-- dont include a starting month (first month in report should have greyed out cells) -->
+		<data dynamic_date="-22 months" value="pass" />
+		<data dynamic_date="-21 months" value="present" />
+		<data dynamic_date="-20 months" value="absent" />
+		<data dynamic_date="-19 months" value="Absent" />
+		<data dynamic_date="-18 months" value="Absent" />
+		<data dynamic_date="-17 months" value="Absent" />
+		<data dynamic_date="-16 months" value="Absent" />
+		<data dynamic_date="-15 months" value="Absent" />
+		<data dynamic_date="-14 months" value="fail" />
+		<data dynamic_date="-13 months" value="Absent" />
+		<data dynamic_date="- 12 months" value="Absent" />
+
+		<data dynamic_date="- 11 months" value="pass" />
+		<data dynamic_date="- 10 months" value="PASS" />
+		<data dynamic_date="- 9 months" value="paSS" />
+		<data dynamic_date="- 8 months" value="abSENT" />
+		<data dynamic_date="- 7 months" value="Absent" />
+		<data dynamic_date="- 6 months" value="Absent" />
+		<data dynamic_date="- 5 months" value="pass" />
+		<data dynamic_date="- 4 months" value="present" />
+		<data dynamic_date="- 3 months" value="pass" />
+		<data dynamic_date="- 2 months" value="Absent" />
+		<data dynamic_date="- 1 months" value="absent" />
+	</operationsdata>
+
+
+	<operationsdata site="site1" indicator="E.coli">
+		<!-- dont include starting 12 months -->
+		<data dynamic_date="- 12 months" value="&lt;1" />
+		<data dynamic_date="- 11 months" value="&lt;1" />
+		<data dynamic_date="- 10 months" value="&lt;1" />
+		<data dynamic_date="- 9 months" value="&lt;1" />
+		<data dynamic_date="- 8 months" value="&lt;10" />
+		<data dynamic_date="- 7 months" value="0" />
+		<data dynamic_date="- 6 months" value="0" />
+		<data dynamic_date="- 5 months" value="66" />
+		<data dynamic_date="- 4 months" value="1" />
+		<data dynamic_date="- 3 months" value="&lt;3" />
+		<data dynamic_date="- 2 months" value="&lt;1" />
+		<data dynamic_date="- 1 months" value="0" />
+	</operationsdata>
+
+	<operationsdata site="site1_child" indicator="Eschericia coli">
+		<data dynamic_date="- 24 months" value="good" />
+		<data dynamic_date="- 23 months" value="fail" />
+		<data dynamic_date="- 22 months" value="PAss" />
+		<data dynamic_date="- 21 months" value="absenT" />
+		<data dynamic_date="- 20 months" value="PAss" />
+		<data dynamic_date="- 19 months" value="no" />
+		<data dynamic_date="- 18 months" value="fail" />
+		<data dynamic_date="- 17 months" value="pass" />
+		<data dynamic_date="- 16 months" value="pass" />
+		<data dynamic_date="- 15 months" value="fail" />
+		<data dynamic_date="- 14 months" value="absenT" />
+		<data dynamic_date="- 13 months" value="absenT" />
+		<!-- dont include end 12 months -->
+	</operationsdata>
+
+
+	<operationsdata site="site2" indicator="ecoli">
+		<!-- dont include starting 12 months -->
+		<data dynamic_date="- 12 months" value="&lt;1" />
+		<data dynamic_date="- 11 months" value="&lt;1" />
+		<data dynamic_date="- 10 months" value="&lt;1" />
+		<data dynamic_date="- 9 months" value="&lt;1" />
+		<data dynamic_date="- 8 months" value="&lt;10" />
+		<data dynamic_date="- 7 months" value="0" />
+		<data dynamic_date="- 6 months" value="0" />
+		<data dynamic_date="- 5 months" value="66" />
+		<data dynamic_date="- 4 months" value="1" />
+		<data dynamic_date="- 3 months" value="&lt;3" />
+		<data dynamic_date="- 2 months" value="&lt;1" />
+		<data dynamic_date="- 1 months" value="0" />
+	</operationsdata>
+
+	<!-- include data for an inactive site -->
+	<operationsdata site="site4" indicator="Eschericia coli">
+		<data dynamic_date="-23 months" value="fail" />
+		<data dynamic_date="-22 months" value="pass" />
+		<data dynamic_date="-21 months" value="present" />
+		<data dynamic_date="-20 months" value="absent" />
+		<data dynamic_date="-19 months" value="Absent" />
+		<data dynamic_date="-18 months" value="Absent" />
+		<data dynamic_date="-17 months" value="Absent" />
+		<data dynamic_date="-16 months" value="Absent" />
+		<data dynamic_date="-15 months" value="Absent" />
+		<data dynamic_date="-14 months" value="fail" />
+		<data dynamic_date="-13 months" value="Absent" />
+		<data dynamic_date="- 12 months" value="Absent" />
+
+		<data dynamic_date="- 11 months" value="pass" />
+		<data dynamic_date="- 10 months" value="PASS" />
+		<data dynamic_date="- 9 months" value="paSS" />
+		<data dynamic_date="- 8 months" value="abSENT" />
+		<data dynamic_date="- 7 months" value="Absent" />
+		<data dynamic_date="- 6 months" value="Absent" />
+		<data dynamic_date="- 5 months" value="pass" />
+		<data dynamic_date="- 4 months" value="present" />
+		<data dynamic_date="- 3 months" value="pass" />
+		<data dynamic_date="- 2 months" value="Absent" />
+		<data dynamic_date="- 1 months" value="absent" />
+	</operationsdata>
+
+</data>
